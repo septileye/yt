@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEPTILEYE - YouTube Channel</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body, html {
       margin: 0;
@@ -21,33 +22,24 @@
       background: rgba(0,0,0,0.6);
       z-index: 10;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 1rem 2rem;
     }
-    h2 {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    h2::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50%;
-      height: 3px;
-      background-color: #ff4d4d;
-    }
     .dropdown {
-      position: relative;
-      display: inline-block;
+      position: absolute;
+      right: 20px;
+    }
+    .dropdown-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
     }
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #222;
+      right: 0;
+      top: 100%;
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
@@ -62,12 +54,12 @@
       display: block;
     }
     section {
-      padding: 140px 20px 100px;
+      padding: 120px 20px;
       min-height: 100vh;
     }
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 20px;
       background-color: #111;
       font-size: 0.9rem;
     }
@@ -90,38 +82,35 @@
       object-fit: cover;
       border: 3px solid white;
     }
+    .btn {
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
     .video-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
     }
     .video-container iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
+      width: 360px;
+      height: 215px;
       transition: transform 0.3s ease;
     }
     .video-container iframe:hover {
       transform: scale(1.05);
     }
-    .watch-now {
-      color: #00bfff;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .subscribe {
-      font-size: 1.3rem;
-      color: #ff4d4d;
-      margin-top: 20px;
-      font-weight: bold;
-    }
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 2rem;
       font-size: 2rem;
-      margin-top: 2rem;
+      margin-top: 20px;
     }
     .social-icons a {
       color: white;
@@ -130,32 +119,6 @@
     .social-icons a:hover {
       transform: scale(1.2);
     }
-    .footer-columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 40px;
-      background: #111;
-      text-align: left;
-    }
-    .footer-columns div {
-      flex: 1;
-      min-width: 200px;
-      padding: 20px;
-    }
-    .footer-columns h3 {
-      border-bottom: 2px solid #ff4d4d;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-    .footer-columns ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer-columns ul li a {
-      color: #00bfff;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -163,12 +126,11 @@
   <header>
     <h1>SEPTILEYE</h1>
     <div class="dropdown">
-      <span style="cursor: pointer;">Menu</span>
+      <i class="fas fa-bars dropdown-icon"></i>
       <div class="dropdown-content">
         <a href="#about">About</a>
         <a href="#featured">Featured Videos</a>
         <a href="#social">Connect With Us</a>
-        <a href="#games">Games</a>
       </div>
     </div>
   </header>
@@ -182,73 +144,36 @@
         I specialize in producing informative, useful, and fun videos on the <strong>Pojav Launcher</strong> that allow mobile gamers to enjoy the full <strong>Java Edition of Minecraft</strong> directly from their smartphones or tablets. If you need setup tutorials, tips for playing, or some enjoyable and interesting content, you've come to the right place.<br /><br />
         Based in <strong>Pakistan</strong>, I’m passionate about making Minecraft more accessible and enjoyable for mobile gamers around the world. Join the community, subscribe, and start your Minecraft Java journey on mobile today!
       </p>
-      <p class="subscribe">Subscribe now</p>
+      <button class="btn">Subscribe Now</button>
     </div>
   </section>
 
   <section id="featured">
     <h2>Featured Videos</h2>
-    <p style="text-align:center;">Catch the latest and most popular videos from my channel right here!</p>
     <div class="video-container">
       <div>
         <iframe src="https://www.youtube.com/embed/YVDNK4u1-IM" frameborder="0" allowfullscreen></iframe>
-        <div class="watch-now">Watch now</div>
+        <button class="btn">Watch Now</button>
       </div>
       <div>
         <iframe src="https://www.youtube.com/embed/XpGENiwlsl8" frameborder="0" allowfullscreen></iframe>
-        <div class="watch-now">Watch now</div>
+        <button class="btn">Watch Now</button>
       </div>
       <div>
         <iframe src="https://www.youtube.com/embed/LAK7easZ6VI" frameborder="0" allowfullscreen></iframe>
-        <div class="watch-now">Watch now</div>
+        <button class="btn">Watch Now</button>
       </div>
     </div>
   </section>
 
   <section id="social">
     <h2>Connect With Us</h2>
-    <p style="text-align:center;">Follow us on social media and join our community!</p>
     <div class="social-icons">
-      <a href="https://youtube.com/@septileyeOG" target="_blank">📺</a>
-      <a href="https://discord.gg/8Q9m3HMM7V" target="_blank">💬</a>
-      <a href="https://www.instagram.com/septileyeog" target="_blank">📷</a>
+      <a href="https://youtube.com/@septileyeOG" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://discord.gg/8Q9m3HMM7V" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://www.instagram.com/septileyeog" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </section>
-
-  <section id="games">
-    <h2>Games</h2>
-    <p style="text-align:center;">Enjoy a little break with a classic game that everyone loves!</p>
-    <iframe src="https://play.famobi.com/solitaire-classic" width="100%" height="600" frameborder="0"></iframe>
-  </section>
-
-  <div class="footer-columns">
-    <div>
-      <h3>SEPTILEYE</h3>
-      <p>Minecraft Java on mobile made easy and fun!</p>
-      <div class="social-icons">
-        <a href="https://youtube.com/@septileyeOG" target="_blank">📺</a>
-        <a href="https://discord.gg/8Q9m3HMM7V" target="_blank">💬</a>
-        <a href="https://www.instagram.com/septileyeog" target="_blank">📷</a>
-      </div>
-    </div>
-    <div>
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#featured">Featured Videos</a></li>
-        <li><a href="#social">Connect With Us</a></li>
-        <li><a href="#games">Games</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Playlist</h3>
-      <ul>
-        <li><a href="https://youtu.be/YVDNK4u1-IM?si=GZnW0wHxV4bUgZQI" target="_blank">Video 1</a></li>
-        <li><a href="https://youtu.be/XpGENiwlsl8?si=oo0sBDc1MRi8WWFH" target="_blank">Video 2</a></li>
-        <li><a href="https://youtu.be/LAK7easZ6VI?si=d9VKLpsdl_zNffKC" target="_blank">Video 3</a></li>
-      </ul>
-    </div>
-  </div>
 
   <footer>
     Website made by SEPTILEYE | Powered by Level Supply
@@ -259,14 +184,14 @@
     particlesJS("bg", {
       "particles": {
         "number": { "value": 80 },
-        "color": { "value": "#ffffff" },
+        "color": { "value": "#ff6600" },
         "shape": { "type": "circle" },
         "opacity": { "value": 0.5 },
         "size": { "value": 3 },
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#ffffff",
+          "color": "#ff6600",
           "opacity": 0.4,
           "width": 1
         },
