@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEPTILEYE - YouTube Channel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    h2 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 3px;
+      background-color: #ff4d4d;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    section {
+      padding: 140px 20px 100px;
+      min-height: 100vh;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: #111;
+      font-size: 0.9rem;
+    }
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      transition: transform 0.3s ease;
+    }
+    .video-container iframe:hover {
+      transform: scale(1.05);
+    }
+    .watch-now {
+      color: #00bfff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .subscribe {
+      font-size: 1.3rem;
+      color: #ff4d4d;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    .social-icons a {
+      color: white;
+      transition: transform 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px;
+      background: #111;
+      text-align: left;
+    }
+    .footer-columns div {
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+    }
+    .footer-columns h3 {
+      border-bottom: 2px solid #ff4d4d;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .footer-columns ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-columns ul li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header>
+    <h1>SEPTILEYE</h1>
+    <div class="dropdown">
+      <span style="cursor: pointer;">Menu</span>
+      <div class="dropdown-content">
+        <a href="#about">About</a>
+        <a href="#featured">Featured Videos</a>
+        <a href="#social">Connect With Us</a>
+        <a href="#games">Games</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-container">
+      <img src="https://i.postimg.cc/zvVXP0dq/pfp.jpg" alt="SEPTILEYE Profile Picture" />
+      <p style="max-width: 800px; text-align: center;">
+        Welcome to <strong>SEPTILEYE</strong> – your home for all about Minecraft on the go!<br /><br />
+        I specialize in producing informative, useful, and fun videos on the <strong>Pojav Launcher</strong> that allow mobile gamers to enjoy the full <strong>Java Edition of Minecraft</strong> directly from their smartphones or tablets. If you need setup tutorials, tips for playing, or some enjoyable and interesting content, you've come to the right place.<br /><br />
+        Based in <strong>Pakistan</strong>, I’m passionate about making Minecraft more accessible and enjoyable for mobile gamers around the world. Join the community, subscribe, and start your Minecraft Java journey on mobile today!
+      </p>
+      <p class="subscribe">Subscribe now</p>
+    </div>
+  </section>
+
+  <section id="featured">
+    <h2>Featured Videos</h2>
+    <p style="text-align:center;">Catch the latest and most popular videos from my channel right here!</p>
+    <div class="video-container">
+      <div>
+        <iframe src="https://www.youtube.com/embed/YVDNK4u1-IM" frameborder="0" allowfullscreen></iframe>
+        <div class="watch-now">Watch now</div>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/XpGENiwlsl8" frameborder="0" allowfullscreen></iframe>
+        <div class="watch-now">Watch now</div>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/LAK7easZ6VI" frameborder="0" allowfullscreen></iframe>
+        <div class="watch-now">Watch now</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="social">
+    <h2>Connect With Us</h2>
+    <p style="text-align:center;">Follow us on social media and join our community!</p>
+    <div class="social-icons">
+      <a href="https://youtube.com/@septileyeOG" target="_blank">📺</a>
+      <a href="https://discord.gg/8Q9m3HMM7V" target="_blank">💬</a>
+      <a href="https://www.instagram.com/septileyeog" target="_blank">📷</a>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>Games</h2>
+    <p style="text-align:center;">Enjoy a little break with a classic game that everyone loves!</p>
+    <iframe src="https://play.famobi.com/solitaire-classic" width="100%" height="600" frameborder="0"></iframe>
+  </section>
+
+  <div class="footer-columns">
+    <div>
+      <h3>SEPTILEYE</h3>
+      <p>Minecraft Java on mobile made easy and fun!</p>
+      <div class="social-icons">
+        <a href="https://youtube.com/@septileyeOG" target="_blank">📺</a>
+        <a href="https://discord.gg/8Q9m3HMM7V" target="_blank">💬</a>
+        <a href="https://www.instagram.com/septileyeog" target="_blank">📷</a>
+      </div>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#featured">Featured Videos</a></li>
+        <li><a href="#social">Connect With Us</a></li>
+        <li><a href="#games">Games</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Playlist</h3>
+      <ul>
+        <li><a href="https://youtu.be/YVDNK4u1-IM?si=GZnW0wHxV4bUgZQI" target="_blank">Video 1</a></li>
+        <li><a href="https://youtu.be/XpGENiwlsl8?si=oo0sBDc1MRi8WWFH" target="_blank">Video 2</a></li>
+        <li><a href="https://youtu.be/LAK7easZ6VI?si=d9VKLpsdl_zNffKC" target="_blank">Video 3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    Website made by SEPTILEYE | Powered by Level Supply
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("bg", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
